@@ -1,0 +1,10 @@
+{
+    "extends": ["eslint:recommended",
+    "plugin:prettier/recommended", "airbnb", "prettier"],
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": ["error"],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/react-in-jsx-scope": 0
+    }
+  }
