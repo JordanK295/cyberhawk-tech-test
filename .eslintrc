@@ -1,10 +1,24 @@
 {
+    "overrides": [
+        {
+          "files": [
+            "**/*.test.js"
+          ],
+          "env": {
+            "jest": true
+          }
+        }
+    ],
+    "env": {
+        "browser": true
+    },
     "extends": ["eslint:recommended",
     "plugin:prettier/recommended", "airbnb", "prettier"],
     "plugins": ["prettier"],
     "rules": {
         "prettier/prettier": ["error"],
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "react/react-in-jsx-scope": 0
+        "react/react-in-jsx-scope": 0,
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
     }
   }
