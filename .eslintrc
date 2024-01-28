@@ -12,13 +12,15 @@
     "env": {
         "browser": true
     },
+    "parser": "@typescript-eslint/parser",
     "extends": ["eslint:recommended",
-    "plugin:prettier/recommended", "airbnb", "prettier"],
-    "plugins": ["prettier"],
+    "plugin:prettier/recommended", "airbnb", "prettier", "plugin:@typescript-eslint/recommended"],
+    "plugins": ["prettier", "@typescript-eslint"],
     "rules": {
         "prettier/prettier": ["error"],
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/react-in-jsx-scope": 0,
-        "import/no-extraneous-dependencies": 0
+        "import/no-extraneous-dependencies": 0,
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+        "no-shadow": 0
     }
   }

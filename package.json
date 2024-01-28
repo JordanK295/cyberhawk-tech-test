@@ -6,19 +6,25 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.9",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
     "axios": "^1.6.7",
     "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "react-search-autocomplete": "^8.5.2",
+    "typescript": "^5.3.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start react/index.js",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "test": "jest"
+    "test": "jest",
+    "tsc": "tsc"
   },
   "eslintConfig": {
     "extends": [

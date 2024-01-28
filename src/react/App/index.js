@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
-import Dashboard from '../Pages/Dashboard';
+import Dashboard from '../Pages/Dashboard/index.tsx';
 
 function App() {
   const location = useLocation();

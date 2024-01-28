@@ -4,15 +4,20 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import { useLocation } from 'react-router-dom';
 import BreezeLogo from '../../../images/breeze_logo.png';
 
+type farm = {
+  id: number;
+  name: string;
+};
+
 function Dashboard() {
-  const [farms, setFarms] = useState([]);
+  const [farms, setFarms] = useState<farm[]>([]);
   const [error, setError] = useState('');
 
   const location = useLocation();
   const farmIdString = location.pathname.split('/').pop();
   const farmId = Number(farmIdString);
 
-  const farm = farms[farmId - 1];
+  const farm: farm = farms[farmId - 1];
 
   useEffect(() => {
     axios
@@ -23,7 +28,7 @@ function Dashboard() {
       });
   }, []);
 
-  const formatResult = (item) => <span className="cursor-pointer">{item.name}</span>;
+  const formatResult = (item: farm) => <span className="cursor-pointer">{item.name}</span>;
 
   return (
     <div className="w-full h-screen bg-neutral-100 text-neutral-700 flex flex-col">
