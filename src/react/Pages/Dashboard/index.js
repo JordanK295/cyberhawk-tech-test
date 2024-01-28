@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import { useLocation } from 'react-router-dom';
+import BreezeLogo from '../../../images/breeze_logo.png';
 
 function Dashboard() {
   const [farms, setFarms] = useState([]);
@@ -29,7 +30,7 @@ function Dashboard() {
       {farm && (
         <>
           <header className="flex justify-between h-16 items-center px-4 py-2">
-            <p>LOGO</p>
+            <img src={BreezeLogo} alt="breeze logo" />
             <div className="w-72">
               <ReactSearchAutocomplete
                 items={farms}
