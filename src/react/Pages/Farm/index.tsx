@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
-import BreezeLogo from '../../../images/breeze_logo.png';
-import { farm } from '../Dashboard/index.tsx';
+import DefaultLayout from '../../Components/DefaultLayout/index.tsx';
 
 type turbine = {
   id: number;
@@ -52,8 +50,6 @@ function Farm() {
 
   const location = useLocation();
   const pathArray = location.pathname.split('/');
-
-  // The ID is the last segment of the path
   const farmID = pathArray[pathArray.length - 1];
 
   useEffect(() => {
@@ -62,6 +58,7 @@ function Farm() {
       .then((res) => setTurbines(res.data))
       .catch((err) => {
         setError(err.message);
+        console.error(err.message);
       });
   }, []);
 
@@ -73,19 +70,14 @@ function Farm() {
 
   const navigate = useNavigate();
 
-  //   const table = useReactTable({
-  //     data: farms,
-  //     columns,
-  //     getCoreRowModel: getCoreRowModel(),
-  //   });
-
-  //   const formatResult = (item: farm) => <span className="cursor-pointer">{item.name}</span>;
-
-  console.log('ff', turbines);
-
   return (
-    <div className="w-full h-screen bg-neutral-100 text-neutral-700 flex flex-col">
-      <p>test</p>
+    <DefaultLayout>
+      {error && (
+        <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4" role="alert">
+          <p className="font-bold">Error:</p>
+          <p>{error}</p>
+        </div>
+      )}
       <table className="w-full text-sm text-left rtl:text-right text-gray-500">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50">
           {table.getHeaderGroups().map((headerGroup) => (
@@ -114,7 +106,7 @@ function Farm() {
           ))}
         </tbody>
       </table>
-    </div>
+    </DefaultLayout>
   );
 }
 

@@ -6,7 +6,7 @@ function App() {
   const location = useLocation();
 
   if (location.pathname === '/') {
-    return <Navigate to="/farm/1" />;
+    return <Navigate to="/farms" />;
   }
 
   return (
