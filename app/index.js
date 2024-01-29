@@ -90,19 +90,28 @@ function getFarmDetails(farmID) {
   const farmTurbines = turbines.filter((t) => t.farm_id === farmID);
   const numberOfTurbines = farmTurbines.length;
 
-  let oldestInspectionTime = null;
+  const mostRecentInspections = [];
+
   farmTurbines.forEach((turbine) => {
     const turbineInspections = inspections.filter((i) => i.turbine_id === turbine.id);
-    turbineInspections.forEach((inspection) => {
-      if (!oldestInspectionTime || new Date(inspection.inspected_at) < new Date(oldestInspectionTime)) {
-        oldestInspectionTime = inspection.inspected_at;
-      }
-    });
+
+    if (turbineInspections.length > 0) {
+      // Sort turbine inspections in descending order based on the 'inspected_at' timestamp
+      turbineInspections.sort((a, b) => new Date(b.inspected_at) - new Date(a.inspected_at));
+
+      // Take the most recent inspection for the turbine
+      mostRecentInspections.push(turbineInspections[0]);
+    }
   });
+
+  // Sort all most recent inspections in ascending order based on the 'inspected_at' timestamp
+  mostRecentInspections.sort((a, b) => new Date(a.inspected_at) - new Date(b.inspected_at));
+
+  const oldestInspectionTime = mostRecentInspections.length > 0 ? mostRecentInspections[0].inspected_at : null;
 
   const averageGrade = calculateAverageFarmGrade(farmTurbines, inspections, grades);
 
-  const oldestInspection = daysAgo(oldestInspectionTime);
+  const oldestInspection = oldestInspectionTime ? daysAgo(oldestInspectionTime) : null;
 
   return {
     id: farm.id,

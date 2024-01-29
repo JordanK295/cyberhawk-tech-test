@@ -19,13 +19,20 @@ const columns = [
     // cell: (info) => info.getValue(),
   }),
   columnHelper.accessor('name', {
-    header: () => 'Name',
+    header: 'Name',
   }),
   columnHelper.accessor('numberOfTurbines', {
     header: () => <span>Number of Turbines</span>,
   }),
   columnHelper.accessor('oldestInspection', {
-    header: 'Oldest inspection',
+    header: () => (
+      <div className="has-tooltip">
+        <span className="tooltip rounded shadow-lg p-1 bg-gray-100 -mt-8">
+          Last inspection requires all turbines on a farm to have been inspected
+        </span>
+        Last inspection
+      </div>
+    ),
   }),
   columnHelper.accessor('averageGrade', {
     header: 'Average Grade',
@@ -64,7 +71,7 @@ function Dashboard() {
       )}
       {farms && (
         <table className="w-full text-sm text-left rtl:text-right text-gray-500">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+          <thead className="text-xs text-gray-700 bg-gray-50">
             {table.getHeaderGroups().map((headerGroup) => (
               <tr key={headerGroup.id}>
                 {headerGroup.headers.map((header) => (

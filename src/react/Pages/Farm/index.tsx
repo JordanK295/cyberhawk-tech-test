@@ -8,7 +8,7 @@ type turbine = {
   id: number;
   name: string;
   numberOfComponents: number;
-  oldestInspection: string;
+  mostRecentInspection: string;
   averageGrade: number;
   lat: number;
   lng: number;
@@ -33,8 +33,8 @@ const columns = [
     cell: (info) => <p>{parseFloat(info.getValue().toFixed(4))}</p>,
     // cell: (info) => <p>{info.getValue()}</p>,
   }),
-  columnHelper.accessor('oldestInspection', {
-    header: 'Oldest Inspection',
+  columnHelper.accessor('mostRecentInspection', {
+    header: 'Last Inspection',
   }),
   columnHelper.accessor('averageGrade', {
     header: 'Average Grade',
@@ -69,6 +69,8 @@ function Farm() {
   });
 
   const navigate = useNavigate();
+
+  console.log('oo', turbines);
 
   return (
     <DefaultLayout>
