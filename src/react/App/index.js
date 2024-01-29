@@ -12,9 +12,9 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/farms" element={<Dashboard />} />
-      <Route path="/farm/:farmid" element={<Farm />} />
-      <Route path="/farm/:farmid/turbine/:turbineid" element={<Turbine />} />
+      <Route path="/farms" element={<Dashboard key={Math.random()} />} />
+      <Route path="/farm/:farmid" element={<Farm key={Math.random()} />} />
+      <Route path="/farm/:farmid/turbine/:turbineid" element={<Turbine key={Math.random()} />} />
     </Routes>
   );
 }
