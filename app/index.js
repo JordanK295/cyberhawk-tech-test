@@ -28,18 +28,7 @@ app.use((req, res, next) => {
   next();
 });
 
-const componentTypes = [
-  { id: 1, name: 'Component Type 1', created_at: '2024-01-27T13:10:00Z', updated_at: '2024-01-27T13:15:00Z' },
-  // Add more component types as needed
-];
-
-const gradeTypes = [
-  { id: 1, name: 'Grade Type 1', created_at: '2024-01-27T13:20:00Z', updated_at: '2024-01-27T13:25:00Z' },
-  // Add more grade types as needed
-];
-
 // Farms
-// Function to get farm details by ID
 
 function daysAgo(dateTimeString) {
   const currentDateTime = new Date();
@@ -48,10 +37,14 @@ function daysAgo(dateTimeString) {
   const timeDifference = currentDateTime - pastDateTime;
   const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
 
-  return `${daysDifference} days`;
+  return `${daysDifference} days ago`;
 }
 
-function calculateAverageGrade(turbines, inspections, grades) {
+function roundToOneDecimalPlace(number) {
+  return parseFloat(number.toFixed(1));
+}
+
+function calculateAverageFarmGrade(turbines, inspections, grades) {
   let totalGrade = 0;
   let totalGradesCount = 0;
 
@@ -67,9 +60,21 @@ function calculateAverageGrade(turbines, inspections, grades) {
     });
   });
 
-  function roundToOneDecimalPlace(number) {
-    return parseFloat(number.toFixed(1));
-  }
+  return totalGradesCount > 0 ? roundToOneDecimalPlace(totalGrade / totalGradesCount) : null;
+}
+
+function calculateAverageTurbineGrade(turbineID, inspections, grades) {
+  const turbineInspections = inspections.filter((i) => i.turbine_id === turbineID);
+  let totalGrade = 0;
+  let totalGradesCount = 0;
+
+  turbineInspections.forEach((inspection) => {
+    const turbineGrades = grades.filter((g) => g.inspection_id === inspection.id);
+    turbineGrades.forEach((grade) => {
+      totalGrade += grade.grade_type_id;
+      totalGradesCount += 1;
+    });
+  });
 
   return totalGradesCount > 0 ? roundToOneDecimalPlace(totalGrade / totalGradesCount) : null;
 }
@@ -84,28 +89,65 @@ function getFarmDetails(farmID) {
   const farmTurbines = turbines.filter((t) => t.farm_id === farmID);
   const numberOfTurbines = farmTurbines.length;
 
-  let leastRecentInspectionTime = null;
+  let oldestInspectionTime = null;
   farmTurbines.forEach((turbine) => {
     const turbineInspections = inspections.filter((i) => i.turbine_id === turbine.id);
     turbineInspections.forEach((inspection) => {
-      if (!leastRecentInspectionTime || new Date(inspection.inspected_at) < new Date(leastRecentInspectionTime)) {
-        leastRecentInspectionTime = inspection.inspected_at;
+      if (!oldestInspectionTime || new Date(inspection.inspected_at) < new Date(oldestInspectionTime)) {
+        oldestInspectionTime = inspection.inspected_at;
       }
     });
   });
 
-  const averageGrade = calculateAverageGrade(farmTurbines, inspections, grades);
+  const averageGrade = calculateAverageFarmGrade(farmTurbines, inspections, grades);
 
-  const leastRecentInspectionDaysAgo = daysAgo(leastRecentInspectionTime);
+  const oldestInspection = daysAgo(oldestInspectionTime);
 
   return {
     id: farm.id,
     name: farm.name,
     numberOfTurbines,
-    leastRecentInspectionDaysAgo,
+    oldestInspection,
     averageGrade,
   };
 }
+
+const getTurbinesDetails = (farmId) => {
+  // Find the turbines associated with the farm
+  const farmTurbines = turbines.filter((t) => t.farm_id === farmId);
+
+  return farmTurbines.map((turbine) => {
+    const turbineInspections = inspections.filter((i) => i.turbine_id === turbine.id);
+
+    // Find the oldest inspection time
+    const oldestInspectionDate = turbineInspections.reduce(
+      (oldest, inspection) =>
+        oldest && new Date(inspection.inspected_at) > new Date(oldest) ? oldest : inspection.inspected_at,
+      null
+    );
+
+    const oldestInspection = daysAgo(oldestInspectionDate);
+
+    // Calculate the average grade for all components in the turbine
+    const averageGrade = calculateAverageTurbineGrade(turbine.id, inspections, grades);
+
+    // Find the number of components for the turbine
+    const numberOfComponents = components.filter((g) => g.turbine_id === turbine.id).length;
+
+    return {
+      id: turbine.id,
+      name: turbine.name,
+      farmId: turbine.farm_id,
+      lat: turbine.lat,
+      lng: turbine.lng,
+      createdAt: turbine.created_at,
+      updatedAt: turbine.updated_at,
+      oldestInspection,
+      averageGrade,
+      numberOfComponents,
+    };
+  });
+};
 
 // Endpoint to get farm details by ID
 app.get('/api/farms/:farmID', (req, res) => {
@@ -125,12 +167,10 @@ app.get('/api/farms', (req, res) => {
   res.json(farmsDetails);
 });
 
-// Turbines
 app.get('/api/farms/:farmID/turbines', (req, res) => {
-  const farmID = parseInt(req.params.farmID);
-  const farmTurbines = turbines.filter((turbine) => turbine.farm_id === farmID);
+  const farmID = parseInt(req.params.farmID, 10);
 
-  res.json({ data: farmTurbines });
+  res.json(getTurbinesDetails(farmID));
 });
 
 app.get('/api/farms/:farmID/turbines/:turbineID', (req, res) => {
