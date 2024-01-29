@@ -36,8 +36,9 @@ function daysAgo(dateTimeString) {
 
   const timeDifference = currentDateTime - pastDateTime;
   const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  const text = daysDifference === 1 ? 'day ago' : `days ago`;
 
-  return `${daysDifference} days ago`;
+  return `${daysDifference} ${text}`;
 }
 
 function roundToOneDecimalPlace(number) {
@@ -117,16 +118,21 @@ const getTurbinesDetails = (farmId) => {
   const farmTurbines = turbines.filter((t) => t.farm_id === farmId);
 
   return farmTurbines.map((turbine) => {
-    const turbineInspections = inspections.filter((i) => i.turbine_id === turbine.id);
+    function getMostRecentInspection(inspections, turbineID) {
+      const turbineInspections = inspections.filter((inspection) => inspection.turbine_id === turbineID);
 
-    // Find the oldest inspection time
-    const oldestInspectionDate = turbineInspections.reduce(
-      (oldest, inspection) =>
-        oldest && new Date(inspection.inspected_at) > new Date(oldest) ? oldest : inspection.inspected_at,
-      null
-    );
+      if (turbineInspections.length === 0) {
+        return null; // No inspections found for the given turbine
+      }
 
-    const oldestInspection = daysAgo(oldestInspectionDate);
+      // Sort inspections in descending order based on the 'inspected_at' timestamp
+      const sortedInspections = turbineInspections.sort((a, b) => new Date(b.inspected_at) - new Date(a.inspected_at));
+
+      return sortedInspections[0];
+    }
+
+    // Find the most recent inspection for the given turbine
+    const mostRecentInspection = daysAgo(getMostRecentInspection(inspections, turbine.id).inspected_at);
 
     // Calculate the average grade for all components in the turbine
     const averageGrade = calculateAverageTurbineGrade(turbine.id, inspections, grades);
@@ -142,7 +148,7 @@ const getTurbinesDetails = (farmId) => {
       lng: turbine.lng,
       createdAt: turbine.created_at,
       updatedAt: turbine.updated_at,
-      oldestInspection,
+      mostRecentInspection,
       averageGrade,
       numberOfComponents,
     };
