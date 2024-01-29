@@ -87,7 +87,7 @@ function Dashboard() {
               <tr
                 key={row.id}
                 onClick={() => navigate(`/farm/${row.original.id}`)}
-                className="bg-white border-b hover:scale-[1.03] hover:border-y-2 hover:bg-blue-50 duration-100 cursor-pointer"
+                className="bg-white border-b hover:bg-blue-50 duration-100 cursor-pointer"
               >
                 {row.getVisibleCells().map((cell) => (
                   <td key={cell.id} className="px-6 py-4 text-gray-900 whitespace-nowrap">

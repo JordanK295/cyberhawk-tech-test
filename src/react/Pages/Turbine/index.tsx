@@ -1,61 +1,46 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import DefaultLayout from '../../Components/DefaultLayout/index.tsx';
 
-type turbine = {
+type component = {
   id: number;
-  name: string;
-  numberOfComponents: number;
-  mostRecentInspection: string;
-  averageGrade: number;
-  lat: number;
-  lng: number;
+  componentTypeId: number;
+  turbineId: number;
+  lastInspection: string;
+  grade: number;
 };
 
-const columnHelper = createColumnHelper<turbine>();
+const columnHelper = createColumnHelper<component>();
 
 const columns = [
   columnHelper.accessor('id', {
-    header: () => 'Turbine ID',
-    // cell: (info) => info.getValue(),
+    header: () => 'Component ID',
   }),
-  columnHelper.accessor('name', {
-    header: () => 'Name',
+  columnHelper.accessor('componentTypeId', {
+    header: () => 'Component Type ID',
   }),
-  columnHelper.accessor('lat', {
-    header: () => 'Latitude',
-    cell: (info) => <p>{parseFloat(info.getValue().toFixed(4))}</p>,
+  columnHelper.accessor('lastInspection', {
+    header: () => 'Last Inspection',
   }),
-  columnHelper.accessor('lng', {
-    header: 'Longitude',
-    cell: (info) => <p>{parseFloat(info.getValue().toFixed(4))}</p>,
-    // cell: (info) => <p>{info.getValue()}</p>,
-  }),
-  columnHelper.accessor('mostRecentInspection', {
-    header: 'Last Inspection',
-  }),
-  columnHelper.accessor('averageGrade', {
-    header: 'Average Grade',
-  }),
-  columnHelper.accessor('numberOfComponents', {
-    header: 'Number Of Components',
+  columnHelper.accessor('grade', {
+    header: 'Grade',
   }),
 ];
 
-function Farm() {
-  const [turbines, setTurbines] = useState<turbine[]>([]);
+function Turbine() {
+  const [components, setComponents] = useState<component[]>([]);
   const [error, setError] = useState('');
 
   const location = useLocation();
   const pathArray = location.pathname.split('/');
-  const farmID = pathArray[pathArray.length - 1];
+  const turbineId = pathArray[pathArray.length - 1];
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/farms/${farmID}/turbines`)
-      .then((res) => setTurbines(res.data))
+      .get(`http://localhost:8080/api/turbines/${turbineId}/components`)
+      .then((res) => setComponents(res.data.components))
       .catch((err) => {
         setError(err.message);
         console.error(err.message);
@@ -63,14 +48,10 @@ function Farm() {
   }, []);
 
   const table = useReactTable({
-    data: turbines,
+    data: components,
     columns,
     getCoreRowModel: getCoreRowModel(),
   });
-
-  const navigate = useNavigate();
-
-  console.log('oo', turbines);
 
   return (
     <DefaultLayout>
@@ -94,11 +75,7 @@ function Farm() {
         </thead>
         <tbody>
           {table.getRowModel().rows.map((row) => (
-            <tr
-              key={row.id}
-              onClick={() => navigate(`/farm/${farmID}/turbine/${row.original.id}`)}
-              className="bg-white border-b hover:bg-blue-50 duration-100 cursor-pointer"
-            >
+            <tr key={row.id} className="bg-white border-b hover:bg-blue-50 duration-100">
               {row.getVisibleCells().map((cell) => (
                 <td key={cell.id} className="px-6 py-4 text-gray-900 whitespace-nowrap">
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -112,4 +89,4 @@ function Farm() {
   );
 }
 
-export default Farm;
+export default Turbine;
