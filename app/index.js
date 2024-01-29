@@ -28,8 +28,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Farms
-
 function daysAgo(dateTimeString) {
   const currentDateTime = new Date();
   const pastDateTime = new Date(dateTimeString);
@@ -164,6 +162,25 @@ const getTurbinesDetails = (farmId) => {
   });
 };
 
+function getMostRecentInspection(inspections, turbineID) {
+  const turbineInspections = inspections.filter((i) => i.turbine_id === turbineID);
+
+  if (turbineInspections.length === 0) {
+    return null;
+  }
+
+  // Sort inspections in descending order based on the 'inspected_at' timestamp
+  const sortedInspections = turbineInspections.sort((a, b) => new Date(b.inspected_at) - new Date(a.inspected_at));
+
+  return sortedInspections[0];
+}
+
+// Endpoint to get details for all farms
+app.get('/api/farms', (req, res) => {
+  const farmsDetails = farms.map((farm) => getFarmDetails(farm.id));
+  res.json(farmsDetails);
+});
+
 // Endpoint to get farm details by ID
 app.get('/api/farms/:farmID', (req, res) => {
   const farmID = parseInt(req.params.farmID, 10);
@@ -173,13 +190,7 @@ app.get('/api/farms/:farmID', (req, res) => {
     return res.status(404).json({ error: 'Farm not found' });
   }
 
-  res.json(farmDetails);
-});
-
-// Endpoint to get details for all farms
-app.get('/api/farms', (req, res) => {
-  const farmsDetails = farms.map((farm) => getFarmDetails(farm.id));
-  res.json(farmsDetails);
+  return res.json(farmDetails);
 });
 
 app.get('/api/farms/:farmID/turbines', (req, res) => {
@@ -188,36 +199,47 @@ app.get('/api/farms/:farmID/turbines', (req, res) => {
   res.json(getTurbinesDetails(farmID));
 });
 
-app.get('/api/farms/:farmID/turbines/:turbineID', (req, res) => {
-  const farmID = parseInt(req.params.farmID);
-  const turbineID = parseInt(req.params.turbineID);
-  const turbine = turbines.find((turbine) => turbine.id === turbineID && turbine.farm_id === farmID);
-
-  if (turbine) {
-    res.json(turbine);
-  } else {
-    res.status(404).json({ code: 404, message: 'Turbine not found' });
-  }
-});
-
-// Components
+// Endpoint to get components for a specific turbine
 app.get('/api/turbines/:turbineID/components', (req, res) => {
-  const turbineID = parseInt(req.params.turbineID);
-  const turbineComponents = components.filter((component) => component.turbine_id === turbineID);
+  const turbineID = parseInt(req.params.turbineID, 10);
 
-  res.json({ data: turbineComponents });
-});
+  // Find the components associated with the turbine
+  const turbineComponents = components.filter((c) => c.turbine_id === turbineID);
 
-app.get('/api/turbines/:turbineID/components/:componentID', (req, res) => {
-  const turbineID = parseInt(req.params.turbineID);
-  const componentID = parseInt(req.params.componentID);
-  const component = components.find((component) => component.id === componentID && component.turbine_id === turbineID);
-
-  if (component) {
-    res.json(component);
-  } else {
-    res.status(404).json({ code: 404, message: 'Component not found' });
+  if (turbineComponents.length === 0) {
+    return res.json([]); // Return an empty array if no components found for the turbine
   }
+
+  // Find the most recent inspection for the turbine
+  const mostRecentInspection = getMostRecentInspection(inspections, turbineID);
+
+  // Find the most recent grade associated with each component
+  const mostRecentGrades = turbineComponents.map((component) => {
+    const componentGrades = grades.filter((grade) => grade.component_id === component.id);
+
+    if (componentGrades.length > 0) {
+      // Sort grades in descending order based on the 'created_at' timestamp
+      componentGrades.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+      // Take the most recent grade for the component
+      return componentGrades[0].grade_type_id;
+    }
+
+    return null; // Return null if no grades found for the component
+  });
+
+  const response = {
+    id: turbineID,
+    components: turbineComponents.map((component, index) => ({
+      id: component.id,
+      componentTypeId: component.component_type_id,
+      turbineId: component.turbine_id,
+      lastInspection: mostRecentInspection ? mostRecentInspection.inspected_at : null,
+      grade: mostRecentGrades[index],
+    })),
+  };
+
+  return res.json(response);
 });
 
 // Start the server
