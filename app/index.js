@@ -1,4 +1,9 @@
 const express = require('express');
+const farms = require('./SampleData/farms.json');
+const turbines = require('./SampleData/turbines.json');
+const components = require('./SampleData/components.json');
+const inspections = require('./SampleData/inspections.json');
+const grades = require('./SampleData/grades.json');
 
 const app = express();
 const port = 8080;
@@ -23,72 +28,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Sample data
-const farms = [
-  { id: 1, name: 'Green Meadows Farm', created_at: '2024-01-27T12:00:00Z', updated_at: '2024-01-27T12:30:00Z' },
-  { id: 2, name: 'Sunrise Orchards', created_at: '2024-01-27T12:05:00Z', updated_at: '2024-01-27T12:35:00Z' },
-  { id: 3, name: 'Golden Fields Ranch', created_at: '2024-01-27T12:10:00Z', updated_at: '2024-01-27T12:40:00Z' },
-  { id: 4, name: 'The Old Brook', created_at: '2024-01-27T12:15:00Z', updated_at: '2024-01-27T12:45:00Z' },
-  { id: 5, name: 'Harmony Haven Farmstead', created_at: '2024-01-27T12:20:00Z', updated_at: '2024-01-27T12:50:00Z' },
-  { id: 6, name: 'Smith Vineyards', created_at: '2024-01-27T12:25:00Z', updated_at: '2024-01-27T12:55:00Z' },
-  { id: 7, name: 'Ada Ranch', created_at: '2024-01-27T12:30:00Z', updated_at: '2024-01-27T13:00:00Z' },
-  { id: 8, name: 'Black Forest Farms', created_at: '2024-01-27T12:35:00Z', updated_at: '2024-01-27T13:05:00Z' },
-  { id: 9, name: 'Ocean Breeze Homestead', created_at: '2024-01-27T12:40:00Z', updated_at: '2024-01-27T13:10:00Z' },
-  { id: 10, name: 'Royal Estate', created_at: '2024-01-27T12:45:00Z', updated_at: '2024-01-27T13:15:00Z' },
-  { id: 11, name: 'Baker Farm', created_at: '2024-01-27T12:50:00Z', updated_at: '2024-01-27T13:20:00Z' },
-  { id: 12, name: 'Connoly Lane', created_at: '2024-01-27T12:55:00Z', updated_at: '2024-01-27T13:25:00Z' },
-  { id: 13, name: 'Egan Lake', created_at: '2024-01-27T13:00:00Z', updated_at: '2024-01-27T13:30:00Z' },
-  { id: 14, name: 'Dreary Farm', created_at: '2024-01-27T13:05:00Z', updated_at: '2024-01-27T13:35:00Z' },
-  { id: 15, name: 'Carlton Estate', created_at: '2024-01-27T13:10:00Z', updated_at: '2024-01-27T13:40:00Z' },
-];
-
-const turbines = [
-  {
-    id: 1,
-    name: 'Turbine 1',
-    farm_id: 1,
-    lat: 123.456,
-    lng: 789.012,
-    created_at: '2024-01-27T12:15:00Z',
-    updated_at: '2024-01-27T12:45:00Z',
-  },
-  // Add more turbines as needed
-];
-
-const components = [
-  {
-    id: 1,
-    component_type_id: 1,
-    turbine_id: 1,
-    created_at: '2024-01-27T12:20:00Z',
-    updated_at: '2024-01-27T12:50:00Z',
-  },
-  // Add more components as needed
-];
-
-const inspections = [
-  {
-    id: 1,
-    turbine_id: 1,
-    inspected_at: '2024-01-27T12:25:00Z',
-    created_at: '2024-01-27T12:55:00Z',
-    updated_at: '2024-01-27T13:00:00Z',
-  },
-  // Add more inspections as needed
-];
-
-const grades = [
-  {
-    id: 1,
-    inspection_id: 1,
-    component_id: 1,
-    grade_type_id: 1,
-    created_at: '2024-01-27T12:35:00Z',
-    updated_at: '2024-01-27T13:05:00Z',
-  },
-  // Add more grades as needed
-];
-
 const componentTypes = [
   { id: 1, name: 'Component Type 1', created_at: '2024-01-27T13:10:00Z', updated_at: '2024-01-27T13:15:00Z' },
   // Add more component types as needed
@@ -99,22 +38,75 @@ const gradeTypes = [
   // Add more grade types as needed
 ];
 
-// Define routes
-
 // Farms
-app.get('/api/farms', (req, res) => {
-  res.json({ data: farms });
+// Function to get farm details by ID
+
+function calculateAverageGrade(turbines, inspections, grades) {
+  let totalGrade = 0;
+  let totalGradesCount = 0;
+
+  turbines.forEach((turbine) => {
+    const turbineInspections = inspections.filter((i) => i.turbine_id === turbine.id);
+
+    turbineInspections.forEach((inspection) => {
+      const turbineGrades = grades.filter((g) => g.inspection_id === inspection.id);
+      turbineGrades.forEach((grade) => {
+        totalGrade += grade.grade_type_id;
+        totalGradesCount += 1;
+      });
+    });
+  });
+
+  return totalGradesCount > 0 ? totalGrade / totalGradesCount : null;
+}
+
+function getFarmDetails(farmID) {
+  const farm = farms.find((f) => f.id === farmID);
+
+  if (!farm) {
+    return null;
+  }
+
+  const farmTurbines = turbines.filter((t) => t.farm_id === farmID);
+  const numberOfTurbines = farmTurbines.length;
+
+  let leastRecentInspectionTime = null;
+  farmTurbines.forEach((turbine) => {
+    const turbineInspections = inspections.filter((i) => i.turbine_id === turbine.id);
+    turbineInspections.forEach((inspection) => {
+      if (!leastRecentInspectionTime || new Date(inspection.inspected_at) < new Date(leastRecentInspectionTime)) {
+        leastRecentInspectionTime = inspection.inspected_at;
+      }
+    });
+  });
+
+  const averageGrade = calculateAverageGrade(farmTurbines, inspections, grades);
+
+  return {
+    id: farm.id,
+    name: farm.name,
+    numberOfTurbines,
+    leastRecentInspectionTime,
+    averageGrade,
+  };
+}
+
+// Endpoint to get farm details by ID
+app.get('/api/farms/:farmID', (req, res) => {
+  const farmID = parseInt(req.params.farmID, 10);
+  const farmDetails = getFarmDetails(farmID);
+
+  if (!farmDetails) {
+    return res.status(404).json({ error: 'Farm not found' });
+  }
+
+  res.json(farmDetails);
 });
 
-app.get('/api/farms/:farmID', (req, res) => {
-  const farmID = parseInt(req.params.farmID);
-  const farm = farms.find((farm) => farm.id === farmID);
-
-  if (farm) {
-    res.json(farm);
-  } else {
-    res.status(404).json({ code: 404, message: 'Farm not found' });
-  }
+// Endpoint to get details for all farms
+app.get('/api/farms', (req, res) => {
+  const farmsDetails = farms.map((farm) => getFarmDetails(farm.id));
+  res.json(farmsDetails);
 });
 
 // Turbines
@@ -156,8 +148,6 @@ app.get('/api/turbines/:turbineID/components/:componentID', (req, res) => {
     res.status(404).json({ code: 404, message: 'Component not found' });
   }
 });
-
-// ... Add more routes as needed ...
 
 // Start the server
 app.listen(port, () => {
