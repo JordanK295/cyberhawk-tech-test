@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import DefaultLayout from '../../Components/DefaultLayout/index.tsx';
+import convertDaysAgoToDate from '../../Utils/convertDaysAgoToDate/index.tsx';
 
 export type farm = {
   id: number;
@@ -31,6 +32,12 @@ const columns = [
           Last inspection requires all turbines on a farm to have been inspected
         </span>
         Last inspection
+      </div>
+    ),
+    cell: (info) => (
+      <div className="has-tooltip">
+        <span className="tooltip rounded shadow-lg p-1 bg-gray-100 -mt-8">{convertDaysAgoToDate(info.getValue())}</span>
+        {info.getValue()}
       </div>
     ),
   }),

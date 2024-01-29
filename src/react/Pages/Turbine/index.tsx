@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import DefaultLayout from '../../Components/DefaultLayout/index.tsx';
+import convertDaysAgoToDate from '../../Utils/convertDaysAgoToDate/index.tsx';
 
 type component = {
   id: number;
@@ -23,6 +24,12 @@ const columns = [
   }),
   columnHelper.accessor('lastInspection', {
     header: () => 'Last Inspection',
+    cell: (info) => (
+      <div className="has-tooltip">
+        <span className="tooltip rounded shadow-lg p-1 bg-gray-100 -mt-8">{convertDaysAgoToDate(info.getValue())}</span>
+        {info.getValue()}
+      </div>
+    ),
   }),
   columnHelper.accessor('grade', {
     header: 'Grade',
