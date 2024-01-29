@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "name": "Green Meadows Farm",
+      "created_at": "2024-01-27T12:00:00Z",
+      "updated_at": "2024-01-27T12:30:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Sunrise Orchards",
+      "created_at": "2024-01-27T12:05:00Z",
+      "updated_at": "2024-01-27T12:35:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Golden Fields Ranch",
+      "created_at": "2024-01-27T12:10:00Z",
+      "updated_at": "2024-01-27T12:40:00Z"
+    },
+    {
+      "id": 4,
+      "name": "The Old Brook",
+      "created_at": "2024-01-27T12:15:00Z",
+      "updated_at": "2024-01-27T12:45:00Z"
+    },
+    {
+      "id": 5,
+      "name": "Harmony Haven Farmstead",
+      "created_at": "2024-01-27T12:20:00Z",
+      "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+      "id": 6,
+      "name": "Smith Vineyards",
+      "created_at": "2024-01-27T12:25:00Z",
+      "updated_at": "2024-01-27T12:55:00Z"
+    },
+    {
+      "id": 7,
+      "name": "Ada Ranch",
+      "created_at": "2024-01-27T12:30:00Z",
+      "updated_at": "2024-01-27T13:00:00Z"
+    },
+    {
+      "id": 8,
+      "name": "Black Forest Farms",
+      "created_at": "2024-01-27T12:35:00Z",
+      "updated_at": "2024-01-27T13:05:00Z"
+    },
+    {
+      "id": 9,
+      "name": "Ocean Breeze Homestead",
+      "created_at": "2024-01-27T12:40:00Z",
+      "updated_at": "2024-01-27T13:10:00Z"
+    },
+    {
+      "id": 10,
+      "name": "Royal Estate",
+      "created_at": "2024-01-27T12:45:00Z",
+      "updated_at": "2024-01-27T13:15:00Z"
+    },
+    {
+      "id": 11,
+      "name": "Baker Farm",
+      "created_at": "2024-01-27T12:50:00Z",
+      "updated_at": "2024-01-27T13:20:00Z"
+    },
+    {
+      "id": 12,
+      "name": "Connoly Lane",
+      "created_at": "2024-01-27T12:55:00Z",
+      "updated_at": "2024-01-27T13:25:00Z"
+    },
+    {
+      "id": 13,
+      "name": "Egan Lake",
+      "created_at": "2024-01-27T13:00:00Z",
+      "updated_at": "2024-01-27T13:30:00Z"
+    },
+    {
+      "id": 14,
+      "name": "Dreary Farm",
+      "created_at": "2024-01-27T13:05:00Z",
+      "updated_at": "2024-01-27T13:35:00Z"
+    },
+    {
+      "id": 15,
+      "name": "Carlton Estate",
+      "created_at": "2024-01-27T13:10:00Z",
+      "updated_at": "2024-01-27T13:40:00Z"
+    }
+  ]

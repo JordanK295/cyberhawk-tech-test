@@ -1,0 +1,1934 @@
+[
+    {
+        "id": 1,
+        "component_type_id": 2,
+        "turbine_id": 1,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 2,
+        "component_type_id": 1,
+        "turbine_id": 1,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 3,
+        "component_type_id": 2,
+        "turbine_id": 2,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 4,
+        "component_type_id": 3,
+        "turbine_id": 2,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 5,
+        "component_type_id": 3,
+        "turbine_id": 2,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 6,
+        "component_type_id": 1,
+        "turbine_id": 3,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 7,
+        "component_type_id": 1,
+        "turbine_id": 3,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 8,
+        "component_type_id": 2,
+        "turbine_id": 4,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 9,
+        "component_type_id": 1,
+        "turbine_id": 4,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 10,
+        "component_type_id": 3,
+        "turbine_id": 5,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 11,
+        "component_type_id": 3,
+        "turbine_id": 5,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 12,
+        "component_type_id": 3,
+        "turbine_id": 6,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 13,
+        "component_type_id": 3,
+        "turbine_id": 6,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 14,
+        "component_type_id": 2,
+        "turbine_id": 6,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 15,
+        "component_type_id": 3,
+        "turbine_id": 7,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 16,
+        "component_type_id": 2,
+        "turbine_id": 7,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 17,
+        "component_type_id": 2,
+        "turbine_id": 8,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 18,
+        "component_type_id": 3,
+        "turbine_id": 8,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 19,
+        "component_type_id": 2,
+        "turbine_id": 9,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 20,
+        "component_type_id": 3,
+        "turbine_id": 9,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 21,
+        "component_type_id": 3,
+        "turbine_id": 10,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 22,
+        "component_type_id": 2,
+        "turbine_id": 10,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 23,
+        "component_type_id": 3,
+        "turbine_id": 10,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 24,
+        "component_type_id": 3,
+        "turbine_id": 11,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 25,
+        "component_type_id": 2,
+        "turbine_id": 11,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 26,
+        "component_type_id": 3,
+        "turbine_id": 12,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 27,
+        "component_type_id": 3,
+        "turbine_id": 12,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 28,
+        "component_type_id": 1,
+        "turbine_id": 12,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 29,
+        "component_type_id": 1,
+        "turbine_id": 13,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 30,
+        "component_type_id": 2,
+        "turbine_id": 13,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 31,
+        "component_type_id": 1,
+        "turbine_id": 14,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 32,
+        "component_type_id": 3,
+        "turbine_id": 14,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 33,
+        "component_type_id": 2,
+        "turbine_id": 14,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 34,
+        "component_type_id": 1,
+        "turbine_id": 15,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 35,
+        "component_type_id": 3,
+        "turbine_id": 15,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 36,
+        "component_type_id": 1,
+        "turbine_id": 16,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 37,
+        "component_type_id": 3,
+        "turbine_id": 16,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 38,
+        "component_type_id": 1,
+        "turbine_id": 17,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 39,
+        "component_type_id": 2,
+        "turbine_id": 17,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 40,
+        "component_type_id": 1,
+        "turbine_id": 18,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 41,
+        "component_type_id": 3,
+        "turbine_id": 18,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 42,
+        "component_type_id": 2,
+        "turbine_id": 18,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 43,
+        "component_type_id": 1,
+        "turbine_id": 19,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 44,
+        "component_type_id": 1,
+        "turbine_id": 19,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 45,
+        "component_type_id": 3,
+        "turbine_id": 19,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 46,
+        "component_type_id": 2,
+        "turbine_id": 20,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 47,
+        "component_type_id": 1,
+        "turbine_id": 20,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 48,
+        "component_type_id": 2,
+        "turbine_id": 20,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 49,
+        "component_type_id": 1,
+        "turbine_id": 21,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 50,
+        "component_type_id": 2,
+        "turbine_id": 21,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 51,
+        "component_type_id": 3,
+        "turbine_id": 22,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 52,
+        "component_type_id": 2,
+        "turbine_id": 22,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 53,
+        "component_type_id": 1,
+        "turbine_id": 22,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 54,
+        "component_type_id": 1,
+        "turbine_id": 23,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 55,
+        "component_type_id": 3,
+        "turbine_id": 23,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 56,
+        "component_type_id": 3,
+        "turbine_id": 23,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 57,
+        "component_type_id": 1,
+        "turbine_id": 24,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 58,
+        "component_type_id": 3,
+        "turbine_id": 24,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 59,
+        "component_type_id": 2,
+        "turbine_id": 25,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 60,
+        "component_type_id": 3,
+        "turbine_id": 25,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 61,
+        "component_type_id": 1,
+        "turbine_id": 25,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 62,
+        "component_type_id": 1,
+        "turbine_id": 26,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 63,
+        "component_type_id": 1,
+        "turbine_id": 26,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 64,
+        "component_type_id": 3,
+        "turbine_id": 26,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 65,
+        "component_type_id": 2,
+        "turbine_id": 27,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 66,
+        "component_type_id": 2,
+        "turbine_id": 27,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 67,
+        "component_type_id": 3,
+        "turbine_id": 28,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 68,
+        "component_type_id": 3,
+        "turbine_id": 28,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 69,
+        "component_type_id": 1,
+        "turbine_id": 29,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 70,
+        "component_type_id": 2,
+        "turbine_id": 29,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 71,
+        "component_type_id": 1,
+        "turbine_id": 29,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 72,
+        "component_type_id": 2,
+        "turbine_id": 30,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 73,
+        "component_type_id": 1,
+        "turbine_id": 30,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 74,
+        "component_type_id": 2,
+        "turbine_id": 30,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 75,
+        "component_type_id": 3,
+        "turbine_id": 31,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 76,
+        "component_type_id": 1,
+        "turbine_id": 31,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 77,
+        "component_type_id": 3,
+        "turbine_id": 31,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 78,
+        "component_type_id": 2,
+        "turbine_id": 32,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 79,
+        "component_type_id": 3,
+        "turbine_id": 32,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 80,
+        "component_type_id": 1,
+        "turbine_id": 33,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 81,
+        "component_type_id": 3,
+        "turbine_id": 33,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 82,
+        "component_type_id": 2,
+        "turbine_id": 34,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 83,
+        "component_type_id": 1,
+        "turbine_id": 34,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 84,
+        "component_type_id": 2,
+        "turbine_id": 35,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 85,
+        "component_type_id": 2,
+        "turbine_id": 35,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 86,
+        "component_type_id": 3,
+        "turbine_id": 35,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 87,
+        "component_type_id": 3,
+        "turbine_id": 36,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 88,
+        "component_type_id": 3,
+        "turbine_id": 36,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 89,
+        "component_type_id": 3,
+        "turbine_id": 36,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 90,
+        "component_type_id": 3,
+        "turbine_id": 37,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 91,
+        "component_type_id": 3,
+        "turbine_id": 37,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 92,
+        "component_type_id": 3,
+        "turbine_id": 37,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 93,
+        "component_type_id": 3,
+        "turbine_id": 38,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 94,
+        "component_type_id": 2,
+        "turbine_id": 38,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 95,
+        "component_type_id": 3,
+        "turbine_id": 38,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 96,
+        "component_type_id": 3,
+        "turbine_id": 39,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 97,
+        "component_type_id": 1,
+        "turbine_id": 39,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 98,
+        "component_type_id": 1,
+        "turbine_id": 39,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 99,
+        "component_type_id": 2,
+        "turbine_id": 40,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 100,
+        "component_type_id": 3,
+        "turbine_id": 40,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 101,
+        "component_type_id": 3,
+        "turbine_id": 41,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 102,
+        "component_type_id": 1,
+        "turbine_id": 41,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 103,
+        "component_type_id": 1,
+        "turbine_id": 42,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 104,
+        "component_type_id": 1,
+        "turbine_id": 42,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 105,
+        "component_type_id": 3,
+        "turbine_id": 43,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 106,
+        "component_type_id": 3,
+        "turbine_id": 43,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 107,
+        "component_type_id": 2,
+        "turbine_id": 43,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 108,
+        "component_type_id": 2,
+        "turbine_id": 44,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 109,
+        "component_type_id": 3,
+        "turbine_id": 44,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 110,
+        "component_type_id": 1,
+        "turbine_id": 44,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 111,
+        "component_type_id": 2,
+        "turbine_id": 45,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 112,
+        "component_type_id": 1,
+        "turbine_id": 45,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 113,
+        "component_type_id": 2,
+        "turbine_id": 46,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 114,
+        "component_type_id": 1,
+        "turbine_id": 46,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 115,
+        "component_type_id": 2,
+        "turbine_id": 47,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 116,
+        "component_type_id": 2,
+        "turbine_id": 47,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 117,
+        "component_type_id": 3,
+        "turbine_id": 48,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 118,
+        "component_type_id": 1,
+        "turbine_id": 48,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 119,
+        "component_type_id": 2,
+        "turbine_id": 48,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 120,
+        "component_type_id": 2,
+        "turbine_id": 49,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 121,
+        "component_type_id": 3,
+        "turbine_id": 49,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 122,
+        "component_type_id": 2,
+        "turbine_id": 49,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 123,
+        "component_type_id": 3,
+        "turbine_id": 50,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 124,
+        "component_type_id": 1,
+        "turbine_id": 50,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 125,
+        "component_type_id": 1,
+        "turbine_id": 50,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 126,
+        "component_type_id": 3,
+        "turbine_id": 51,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 127,
+        "component_type_id": 3,
+        "turbine_id": 51,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 128,
+        "component_type_id": 1,
+        "turbine_id": 52,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 129,
+        "component_type_id": 1,
+        "turbine_id": 52,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 130,
+        "component_type_id": 2,
+        "turbine_id": 52,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 131,
+        "component_type_id": 3,
+        "turbine_id": 53,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 132,
+        "component_type_id": 3,
+        "turbine_id": 53,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 133,
+        "component_type_id": 2,
+        "turbine_id": 54,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 134,
+        "component_type_id": 1,
+        "turbine_id": 54,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 135,
+        "component_type_id": 1,
+        "turbine_id": 54,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 136,
+        "component_type_id": 2,
+        "turbine_id": 55,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 137,
+        "component_type_id": 3,
+        "turbine_id": 55,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 138,
+        "component_type_id": 3,
+        "turbine_id": 56,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 139,
+        "component_type_id": 1,
+        "turbine_id": 56,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 140,
+        "component_type_id": 1,
+        "turbine_id": 57,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 141,
+        "component_type_id": 1,
+        "turbine_id": 57,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 142,
+        "component_type_id": 3,
+        "turbine_id": 57,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 143,
+        "component_type_id": 1,
+        "turbine_id": 58,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 144,
+        "component_type_id": 3,
+        "turbine_id": 58,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 145,
+        "component_type_id": 3,
+        "turbine_id": 58,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 146,
+        "component_type_id": 1,
+        "turbine_id": 59,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 147,
+        "component_type_id": 2,
+        "turbine_id": 59,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 148,
+        "component_type_id": 2,
+        "turbine_id": 59,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 149,
+        "component_type_id": 3,
+        "turbine_id": 60,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 150,
+        "component_type_id": 2,
+        "turbine_id": 60,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 151,
+        "component_type_id": 2,
+        "turbine_id": 61,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 152,
+        "component_type_id": 1,
+        "turbine_id": 61,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 153,
+        "component_type_id": 3,
+        "turbine_id": 61,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 154,
+        "component_type_id": 1,
+        "turbine_id": 62,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 155,
+        "component_type_id": 1,
+        "turbine_id": 62,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 156,
+        "component_type_id": 3,
+        "turbine_id": 62,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 157,
+        "component_type_id": 2,
+        "turbine_id": 63,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 158,
+        "component_type_id": 2,
+        "turbine_id": 63,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 159,
+        "component_type_id": 1,
+        "turbine_id": 64,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 160,
+        "component_type_id": 2,
+        "turbine_id": 64,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 161,
+        "component_type_id": 3,
+        "turbine_id": 64,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 162,
+        "component_type_id": 1,
+        "turbine_id": 65,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 163,
+        "component_type_id": 2,
+        "turbine_id": 65,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 164,
+        "component_type_id": 1,
+        "turbine_id": 66,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 165,
+        "component_type_id": 3,
+        "turbine_id": 66,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 166,
+        "component_type_id": 3,
+        "turbine_id": 66,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 167,
+        "component_type_id": 2,
+        "turbine_id": 67,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 168,
+        "component_type_id": 2,
+        "turbine_id": 67,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 169,
+        "component_type_id": 3,
+        "turbine_id": 68,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 170,
+        "component_type_id": 2,
+        "turbine_id": 68,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 171,
+        "component_type_id": 2,
+        "turbine_id": 68,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 172,
+        "component_type_id": 2,
+        "turbine_id": 69,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 173,
+        "component_type_id": 2,
+        "turbine_id": 69,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 174,
+        "component_type_id": 3,
+        "turbine_id": 69,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 175,
+        "component_type_id": 2,
+        "turbine_id": 70,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 176,
+        "component_type_id": 2,
+        "turbine_id": 70,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 177,
+        "component_type_id": 3,
+        "turbine_id": 71,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 178,
+        "component_type_id": 3,
+        "turbine_id": 71,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 179,
+        "component_type_id": 2,
+        "turbine_id": 72,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 180,
+        "component_type_id": 1,
+        "turbine_id": 72,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 181,
+        "component_type_id": 3,
+        "turbine_id": 73,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 182,
+        "component_type_id": 2,
+        "turbine_id": 73,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 183,
+        "component_type_id": 3,
+        "turbine_id": 74,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 184,
+        "component_type_id": 2,
+        "turbine_id": 74,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 185,
+        "component_type_id": 3,
+        "turbine_id": 75,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 186,
+        "component_type_id": 2,
+        "turbine_id": 75,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 187,
+        "component_type_id": 2,
+        "turbine_id": 75,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 188,
+        "component_type_id": 3,
+        "turbine_id": 76,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 189,
+        "component_type_id": 2,
+        "turbine_id": 76,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 190,
+        "component_type_id": 2,
+        "turbine_id": 76,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 191,
+        "component_type_id": 3,
+        "turbine_id": 77,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 192,
+        "component_type_id": 3,
+        "turbine_id": 77,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 193,
+        "component_type_id": 2,
+        "turbine_id": 77,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 194,
+        "component_type_id": 1,
+        "turbine_id": 78,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 195,
+        "component_type_id": 1,
+        "turbine_id": 78,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 196,
+        "component_type_id": 1,
+        "turbine_id": 79,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 197,
+        "component_type_id": 1,
+        "turbine_id": 79,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 198,
+        "component_type_id": 1,
+        "turbine_id": 80,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 199,
+        "component_type_id": 3,
+        "turbine_id": 80,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 200,
+        "component_type_id": 3,
+        "turbine_id": 81,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 201,
+        "component_type_id": 2,
+        "turbine_id": 81,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 202,
+        "component_type_id": 3,
+        "turbine_id": 82,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 203,
+        "component_type_id": 2,
+        "turbine_id": 82,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 204,
+        "component_type_id": 3,
+        "turbine_id": 82,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 205,
+        "component_type_id": 1,
+        "turbine_id": 83,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 206,
+        "component_type_id": 3,
+        "turbine_id": 83,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 207,
+        "component_type_id": 2,
+        "turbine_id": 84,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 208,
+        "component_type_id": 2,
+        "turbine_id": 84,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 209,
+        "component_type_id": 2,
+        "turbine_id": 84,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 210,
+        "component_type_id": 3,
+        "turbine_id": 85,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 211,
+        "component_type_id": 3,
+        "turbine_id": 85,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 212,
+        "component_type_id": 3,
+        "turbine_id": 85,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 213,
+        "component_type_id": 1,
+        "turbine_id": 86,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 214,
+        "component_type_id": 1,
+        "turbine_id": 86,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 215,
+        "component_type_id": 3,
+        "turbine_id": 87,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 216,
+        "component_type_id": 3,
+        "turbine_id": 87,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 217,
+        "component_type_id": 1,
+        "turbine_id": 87,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 218,
+        "component_type_id": 1,
+        "turbine_id": 88,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 219,
+        "component_type_id": 1,
+        "turbine_id": 88,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 220,
+        "component_type_id": 3,
+        "turbine_id": 88,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 221,
+        "component_type_id": 1,
+        "turbine_id": 89,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 222,
+        "component_type_id": 3,
+        "turbine_id": 89,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 223,
+        "component_type_id": 2,
+        "turbine_id": 89,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 224,
+        "component_type_id": 2,
+        "turbine_id": 90,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 225,
+        "component_type_id": 2,
+        "turbine_id": 90,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 226,
+        "component_type_id": 2,
+        "turbine_id": 91,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 227,
+        "component_type_id": 1,
+        "turbine_id": 91,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 228,
+        "component_type_id": 1,
+        "turbine_id": 91,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 229,
+        "component_type_id": 3,
+        "turbine_id": 92,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 230,
+        "component_type_id": 1,
+        "turbine_id": 92,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 231,
+        "component_type_id": 2,
+        "turbine_id": 93,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 232,
+        "component_type_id": 1,
+        "turbine_id": 93,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 233,
+        "component_type_id": 3,
+        "turbine_id": 94,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 234,
+        "component_type_id": 3,
+        "turbine_id": 94,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 235,
+        "component_type_id": 3,
+        "turbine_id": 94,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 236,
+        "component_type_id": 3,
+        "turbine_id": 95,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 237,
+        "component_type_id": 3,
+        "turbine_id": 95,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 238,
+        "component_type_id": 1,
+        "turbine_id": 95,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 239,
+        "component_type_id": 2,
+        "turbine_id": 96,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 240,
+        "component_type_id": 2,
+        "turbine_id": 96,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 241,
+        "component_type_id": 3,
+        "turbine_id": 96,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 242,
+        "component_type_id": 2,
+        "turbine_id": 97,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 243,
+        "component_type_id": 3,
+        "turbine_id": 97,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 244,
+        "component_type_id": 2,
+        "turbine_id": 97,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 245,
+        "component_type_id": 2,
+        "turbine_id": 98,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 246,
+        "component_type_id": 2,
+        "turbine_id": 98,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 247,
+        "component_type_id": 1,
+        "turbine_id": 98,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 248,
+        "component_type_id": 2,
+        "turbine_id": 99,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 249,
+        "component_type_id": 3,
+        "turbine_id": 99,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 250,
+        "component_type_id": 3,
+        "turbine_id": 100,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 251,
+        "component_type_id": 2,
+        "turbine_id": 100,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 252,
+        "component_type_id": 2,
+        "turbine_id": 100,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 253,
+        "component_type_id": 1,
+        "turbine_id": 101,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 254,
+        "component_type_id": 1,
+        "turbine_id": 101,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 255,
+        "component_type_id": 1,
+        "turbine_id": 101,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 256,
+        "component_type_id": 1,
+        "turbine_id": 102,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 257,
+        "component_type_id": 1,
+        "turbine_id": 102,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 258,
+        "component_type_id": 2,
+        "turbine_id": 102,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 259,
+        "component_type_id": 2,
+        "turbine_id": 103,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 260,
+        "component_type_id": 2,
+        "turbine_id": 103,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 261,
+        "component_type_id": 3,
+        "turbine_id": 103,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 262,
+        "component_type_id": 1,
+        "turbine_id": 104,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 263,
+        "component_type_id": 2,
+        "turbine_id": 104,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 264,
+        "component_type_id": 3,
+        "turbine_id": 104,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 265,
+        "component_type_id": 1,
+        "turbine_id": 105,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 266,
+        "component_type_id": 1,
+        "turbine_id": 105,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 267,
+        "component_type_id": 1,
+        "turbine_id": 105,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 268,
+        "component_type_id": 3,
+        "turbine_id": 106,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 269,
+        "component_type_id": 2,
+        "turbine_id": 106,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 270,
+        "component_type_id": 1,
+        "turbine_id": 106,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 271,
+        "component_type_id": 3,
+        "turbine_id": 107,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 272,
+        "component_type_id": 1,
+        "turbine_id": 107,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 273,
+        "component_type_id": 1,
+        "turbine_id": 107,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 274,
+        "component_type_id": 2,
+        "turbine_id": 108,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 275,
+        "component_type_id": 2,
+        "turbine_id": 108,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    },
+    {
+        "id": 276,
+        "component_type_id": 3,
+        "turbine_id": 108,
+        "created_at": "2024-01-27T12:20:00Z",
+        "updated_at": "2024-01-27T12:50:00Z"
+    }
+]
