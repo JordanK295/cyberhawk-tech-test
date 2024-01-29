@@ -11,7 +11,7 @@ function Header({ farms }: { farms: farm[] }) {
     navigate(`/farm/${item.id}`);
   };
   return (
-    <header className="flex justify-between h-16 items-center px-4 py-2">
+    <header className="flex justify-between h-16 items-center px-4 my-3">
       <a href="/farms" className="flex items-center">
         <img src={BreezeLogo} alt="breeze logo" />
       </a>

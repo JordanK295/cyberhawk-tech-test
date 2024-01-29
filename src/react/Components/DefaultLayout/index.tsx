@@ -44,7 +44,7 @@ function DefaultLayout({ children }: { children: React.Node }) {
     }
 
     if (isDashboardPage) {
-      return 'Dashboard';
+      return 'Farms';
     }
 
     if (isTurbinePage) {
@@ -64,8 +64,8 @@ function DefaultLayout({ children }: { children: React.Node }) {
   return (
     <div className="w-full h-screen bg-neutral-100 text-neutral-700 flex flex-col">
       <Header farms={farms} />
-      <div className="rounded-lg border border-neutral-200 bg-white m-4 h-full px-4 py-2">
-        <h1 className="text-3xl">{createTitle()}</h1>
+      <div className="rounded-lg border border-neutral-200 bg-white mx-4 h-full px-4 py-2">
+        <h1 className="text-2xl">{createTitle()}</h1>
         {children}
       </div>
     </div>
