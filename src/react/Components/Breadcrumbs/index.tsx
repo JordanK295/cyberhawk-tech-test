@@ -7,7 +7,7 @@ function Breadcrumbs({ crumbs }: { crumbs: any }) {
 
   return (
     <nav
-      className="flex px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 mb-3 mt-2"
+      className="flex px-5 py-3 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 mb-3 mt-2 grow"
       aria-label="Breadcrumb"
     >
       {crumbs.length > 0 && (
