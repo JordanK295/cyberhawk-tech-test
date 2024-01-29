@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import DefaultLayout from '../../Components/DefaultLayout/index.tsx';
 
-type turbine = {
+export type turbine = {
   id: number;
   name: string;
   numberOfComponents: number;

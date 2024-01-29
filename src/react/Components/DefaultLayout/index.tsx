@@ -3,9 +3,18 @@ import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import Header from '../Header/index.tsx';
 import { farm } from '../../Pages/Dashboard/index.tsx';
+import { turbine } from '../../Pages/Farm/index.tsx';
 
 function DefaultLayout({ children }: { children: React.Node }) {
   const [farms, setFarms] = useState<farm[]>([]);
+  const [turbines, setTurbines] = useState<turbine[]>([]);
+
+  //   We do the below to avoid having to call the same apis accross multiple components
+  const location = useLocation();
+  const pathArray = location.pathname.split('/');
+  const isDashboardPage = JSON.stringify(pathArray[pathArray.length - 1]) === JSON.stringify('farms');
+  const isFarmPage = pathArray.length === 3 && pathArray[1] === 'farm';
+  const isTurbinePage = JSON.stringify(pathArray).includes('turbine');
 
   useEffect(() => {
     axios
@@ -16,22 +25,35 @@ function DefaultLayout({ children }: { children: React.Node }) {
       });
   }, []);
 
-  //   We do the below to avoid having to call the /farms api twice
-
-  const location = useLocation();
-  const pathArray = location.pathname.split('/');
-  const farmID = pathArray[pathArray.length - 1];
-
-  const isDashboardPage = JSON.stringify(pathArray[pathArray.length - 1]) === JSON.stringify('farms');
-  const isFarmPage = JSON.stringify(pathArray) === JSON.stringify(['', 'farm', `${farmID}`]);
+  useEffect(() => {
+    if (!isTurbinePage) {
+      return;
+    }
+    const farmID = pathArray[pathArray.length - 3];
+    axios
+      .get(`http://localhost:8080/api/farms/${farmID}/turbines`)
+      .then((res) => setTurbines(res.data))
+      .catch((err) => {
+        console.error(err.message);
+      });
+  }, []);
 
   const createTitle = () => {
     if (farms.length === 0) {
       return null;
     }
+
     if (isDashboardPage) {
       return 'Dashboard';
     }
+
+    if (isTurbinePage) {
+      const turbineId = Number(pathArray[pathArray.length - 1]);
+      const currentTurbine = turbines.find((turbine) => turbine.id === turbineId);
+      return currentTurbine ? currentTurbine.name : '';
+    }
+
+    const farmID = pathArray[pathArray.length - 1];
     const currentFarm = farms.filter((farm) => farm.id === Number(farmID))[0];
     if (isFarmPage && currentFarm) {
       return farms.filter((farm) => farm.id === Number(farmID))[0].name;
