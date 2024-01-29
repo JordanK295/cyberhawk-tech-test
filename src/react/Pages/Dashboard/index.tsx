@@ -16,7 +16,7 @@ const columnHelper = createColumnHelper<farm>();
 
 const columns = [
   columnHelper.accessor('id', {
-    // cell: (info) => info.getValue(),
+    header: 'Farm ID',
   }),
   columnHelper.accessor('name', {
     header: 'Name',

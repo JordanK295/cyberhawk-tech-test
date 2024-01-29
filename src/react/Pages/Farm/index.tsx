@@ -19,7 +19,6 @@ const columnHelper = createColumnHelper<turbine>();
 const columns = [
   columnHelper.accessor('id', {
     header: () => 'Turbine ID',
-    // cell: (info) => info.getValue(),
   }),
   columnHelper.accessor('name', {
     header: () => 'Name',
@@ -31,7 +30,6 @@ const columns = [
   columnHelper.accessor('lng', {
     header: 'Longitude',
     cell: (info) => <p>{parseFloat(info.getValue().toFixed(4))}</p>,
-    // cell: (info) => <p>{info.getValue()}</p>,
   }),
   columnHelper.accessor('mostRecentInspection', {
     header: 'Last Inspection',
@@ -69,8 +67,6 @@ function Farm() {
   });
 
   const navigate = useNavigate();
-
-  console.log('oo', turbines);
 
   return (
     <DefaultLayout>

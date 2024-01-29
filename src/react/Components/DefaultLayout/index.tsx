@@ -4,6 +4,8 @@ import { useLocation } from 'react-router-dom';
 import Header from '../Header/index.tsx';
 import { farm } from '../../Pages/Dashboard/index.tsx';
 import { turbine } from '../../Pages/Farm/index.tsx';
+import Breadcrumbs from '../Breadcrumbs/index.tsx';
+import createBreadcrumbs from '../../Utils/createBreadcrumbs/index.tsx';
 
 function DefaultLayout({ children }: { children: React.Node }) {
   const [farms, setFarms] = useState<farm[]>([]);
@@ -12,9 +14,9 @@ function DefaultLayout({ children }: { children: React.Node }) {
   //   We do the below to avoid having to call the same apis accross multiple components
   const location = useLocation();
   const pathArray = location.pathname.split('/');
-  const isDashboardPage = JSON.stringify(pathArray[pathArray.length - 1]) === JSON.stringify('farms');
-  const isFarmPage = pathArray.length === 3 && pathArray[1] === 'farm';
   const isTurbinePage = JSON.stringify(pathArray).includes('turbine');
+
+  const breadcrumbs = createBreadcrumbs(farms, turbines);
 
   useEffect(() => {
     axios
@@ -38,34 +40,11 @@ function DefaultLayout({ children }: { children: React.Node }) {
       });
   }, []);
 
-  const createTitle = () => {
-    if (farms.length === 0) {
-      return null;
-    }
-
-    if (isDashboardPage) {
-      return 'Farms';
-    }
-
-    if (isTurbinePage) {
-      const turbineId = Number(pathArray[pathArray.length - 1]);
-      const currentTurbine = turbines.find((turbine) => turbine.id === turbineId);
-      return currentTurbine ? currentTurbine.name : '';
-    }
-
-    const farmID = pathArray[pathArray.length - 1];
-    const currentFarm = farms.filter((farm) => farm.id === Number(farmID))[0];
-    if (isFarmPage && currentFarm) {
-      return farms.filter((farm) => farm.id === Number(farmID))[0].name;
-    }
-    return '';
-  };
-
   return (
     <div className="w-full h-screen bg-neutral-100 text-neutral-700 flex flex-col">
       <Header farms={farms} />
       <div className="rounded-lg border border-neutral-200 bg-white mx-4 h-full px-4 py-2">
-        <h1 className="text-2xl">{createTitle()}</h1>
+        <Breadcrumbs crumbs={breadcrumbs} />
         {children}
       </div>
     </div>
