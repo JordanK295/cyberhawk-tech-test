@@ -53,7 +53,7 @@ function calculateAverageFarmGrade(turbines, inspections, grades) {
     turbineInspections.forEach((inspection) => {
       const turbineGrades = grades.filter((g) => g.inspection_id === inspection.id);
       turbineGrades.forEach((grade) => {
-        totalGrade += grade.grade_type_id;
+        totalGrade += grade.grade;
         totalGradesCount += 1;
       });
     });
@@ -70,7 +70,7 @@ function calculateAverageTurbineGrade(turbineID, inspections, grades) {
   turbineInspections.forEach((inspection) => {
     const turbineGrades = grades.filter((g) => g.inspection_id === inspection.id);
     turbineGrades.forEach((grade) => {
-      totalGrade += grade.grade_type_id;
+      totalGrade += grade.grade;
       totalGradesCount += 1;
     });
   });
@@ -211,7 +211,7 @@ app.get('/api/turbines/:turbineID/components', (req, res) => {
   }
 
   // Find the most recent inspection for the turbine
-  const mostRecentInspection = getMostRecentInspection(inspections, turbineID);
+  const mostRecentInspection = daysAgo(getMostRecentInspection(inspections, turbineID).inspected_at);
 
   // Find the most recent grade associated with each component
   const mostRecentGrades = turbineComponents.map((component) => {
@@ -222,19 +222,19 @@ app.get('/api/turbines/:turbineID/components', (req, res) => {
       componentGrades.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
       // Take the most recent grade for the component
-      return componentGrades[0].grade_type_id;
+      return componentGrades[0].grade;
     }
 
     return null; // Return null if no grades found for the component
   });
 
   const response = {
-    id: turbineID,
+    turbineId: turbineID,
     components: turbineComponents.map((component, index) => ({
       id: component.id,
       componentTypeId: component.component_type_id,
       turbineId: component.turbine_id,
-      lastInspection: mostRecentInspection ? mostRecentInspection.inspected_at : null,
+      lastInspection: mostRecentInspection,
       grade: mostRecentGrades[index],
     })),
   };
