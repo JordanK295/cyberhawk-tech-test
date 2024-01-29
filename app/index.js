@@ -41,6 +41,16 @@ const gradeTypes = [
 // Farms
 // Function to get farm details by ID
 
+function daysAgo(dateTimeString) {
+  const currentDateTime = new Date();
+  const pastDateTime = new Date(dateTimeString);
+
+  const timeDifference = currentDateTime - pastDateTime;
+  const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+  return `${daysDifference} days`;
+}
+
 function calculateAverageGrade(turbines, inspections, grades) {
   let totalGrade = 0;
   let totalGradesCount = 0;
@@ -57,7 +67,11 @@ function calculateAverageGrade(turbines, inspections, grades) {
     });
   });
 
-  return totalGradesCount > 0 ? totalGrade / totalGradesCount : null;
+  function roundToOneDecimalPlace(number) {
+    return parseFloat(number.toFixed(1));
+  }
+
+  return totalGradesCount > 0 ? roundToOneDecimalPlace(totalGrade / totalGradesCount) : null;
 }
 
 function getFarmDetails(farmID) {
@@ -82,11 +96,13 @@ function getFarmDetails(farmID) {
 
   const averageGrade = calculateAverageGrade(farmTurbines, inspections, grades);
 
+  const leastRecentInspectionDaysAgo = daysAgo(leastRecentInspectionTime);
+
   return {
     id: farm.id,
     name: farm.name,
     numberOfTurbines,
-    leastRecentInspectionTime,
+    leastRecentInspectionDaysAgo,
     averageGrade,
   };
 }

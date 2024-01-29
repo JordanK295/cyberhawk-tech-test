@@ -10,6 +10,7 @@ function App() {
 
   return (
     <Routes>
+      <Route path="/farms" element={<Dashboard />} />
       <Route path="/farm/:farmid" element={<Dashboard />} />
     </Routes>
   );
