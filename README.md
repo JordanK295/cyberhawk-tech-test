@@ -35,7 +35,7 @@ The original repo had issues with docker on my machine. I instead built it from 
 - Mapping
 - ESLint and Prettier
 - UI and branding
-- Github and semantic versioning
+- Github and conventional commits
 - Utilising third party packages where appropriate
 
 ### My thoughts
