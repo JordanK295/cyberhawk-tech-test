@@ -85,7 +85,7 @@ function Farm() {
           <p>{error}</p>
         </div>
       )}
-      <div className="flex">
+      <div className="flex gap-3">
         <table className="w-full text-sm text-left rtl:text-right text-gray-500">
           <thead className="text-xs text-gray-700 bg-gray-50">
             {table.getHeaderGroups().map((headerGroup) => (
