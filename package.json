@@ -2,9 +2,9 @@
   "name": "cyberhawk-tech-test",
   "version": "0.1.0",
   "private": true,
-  "engines" : { 
-    "npm" : ">=10.0.0",
-    "node" : ">=20.0.0"
+  "engines": {
+    "npm": ">=10.0.0",
+    "node": ">=20.0.0"
   },
   "dependencies": {
     "@babel/core": "^7.23.9",
@@ -32,7 +32,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "jest",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "dev": "concurrently --kill-others \"npm run start\" \"node app/.\""
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +62,7 @@
     "@types/jest": "^29.5.11",
     "autoprefixer": "^10.4.17",
     "axios-mock-adapter": "^1.22.0",
+    "concurrently": "^8.2.2",
     "eslint": "^8.56.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",

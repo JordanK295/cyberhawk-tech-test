@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Cyberhawk tech test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a technical test originating from here: https://github.com/cyberhawk-software/technical-test-front-end
 
-## Available Scripts
+A short video demonstration is available here: https://streamable.com/4oi30w
 
-In the project directory, you can run:
+## Running the project locally
 
-### `npm start`
+Install the project dependencies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`npm i` 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Run a local development server:
 
-### `npm test`
+`npm run dev`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This will concurrently run `npm run start` (frontend) and `node app/.` (backend).
 
-### `npm run build`
+You should be able to access the project at http://localhost:3000/.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Backend will be running on port http://localhost:8080/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Notes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The original repo had issues with docker on my machine. I instead built it from scratch but with a node backend, however I'm not a backend dev so please forgive any hiccups.
 
-### `npm run eject`
+### Core concepts demonstrated
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- React
+- Tailwind
+- Typescript and JavaScript
+- Testing
+- Mapping
+- ESLint and Prettier
+- UI and branding
+- Github and semantic versioning
+- Utilising third party packages where appropriate
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### My thoughts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+I'm overall happy with the way this turned out and isn't dissimilar from what I had sketched on paper at the start. I aimed to build something that would would actually work as a scalable and useable application, favouring simplicity over bells and whistles. If tomorrow I wanted to deploy this I could do so and it would serve a purpose, which I can't say the same for other tech tests I've done in the past.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+It took considerably longer than I thought but a lot of that was trying to get the original repo working on my machine. I'm using WSL2 so that is probably something to do with it.
 
-## Learn More
+###  Things for the future
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If I continued this in the future I would add the following:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Sortable and customizable table columns
+- Tables downloadable as .csv
+- Login and api authentication
+- Editable data
+- Turbine and component models
+- Responsive UI
+- E2E testing
