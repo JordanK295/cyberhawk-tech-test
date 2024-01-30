@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { createColumnHelper, flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import DefaultLayout from '../../Components/DefaultLayout/index.tsx';
 import convertDaysAgoToDate from '../../Utils/convertDaysAgoToDate/index.tsx';
+import GoogleMap from '../../Components/GoogleMap/index.tsx';
 
 export type turbine = {
   id: number;
@@ -83,34 +84,38 @@ function Farm() {
           <p>{error}</p>
         </div>
       )}
-      <table className="w-full text-sm text-left rtl:text-right text-gray-500">
-        <thead className="text-xs text-gray-700 bg-gray-50">
-          {table.getHeaderGroups().map((headerGroup) => (
-            <tr key={headerGroup.id}>
-              {headerGroup.headers.map((header) => (
-                <th key={header.id} className="px-6 py-3">
-                  {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {table.getRowModel().rows.map((row) => (
-            <tr
-              key={row.id}
-              onClick={() => navigate(`/farm/${farmID}/turbine/${row.original.id}`)}
-              className="bg-white border-b hover:bg-blue-50 duration-100 cursor-pointer"
-            >
-              {row.getVisibleCells().map((cell) => (
-                <td key={cell.id} className="px-6 py-4 text-gray-900 whitespace-nowrap">
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="flex">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-500">
+          <thead className="text-xs text-gray-700 bg-gray-50">
+            {table.getHeaderGroups().map((headerGroup) => (
+              <tr key={headerGroup.id}>
+                {headerGroup.headers.map((header) => (
+                  <th key={header.id} className="px-6 py-3">
+                    {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
+                  </th>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody>
+            {table.getRowModel().rows.map((row) => (
+              <tr
+                key={row.id}
+                onClick={() => navigate(`/farm/${farmID}/turbine/${row.original.id}`)}
+                className="bg-white border-b hover:bg-blue-50 duration-100 cursor-pointer"
+              >
+                {row.getVisibleCells().map((cell) => (
+                  <td key={cell.id} className="px-6 py-4 text-gray-900 whitespace-nowrap">
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <GoogleMap />
+      </div>
     </DefaultLayout>
   );
 }
