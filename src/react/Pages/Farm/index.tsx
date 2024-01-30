@@ -51,6 +51,7 @@ const columns = [
 ];
 
 function Farm() {
+  const [showMap, setShowMap] = useState<boolean>(false);
   const [turbines, setTurbines] = useState<turbine[]>([]);
   const [error, setError] = useState('');
 
@@ -77,7 +78,7 @@ function Farm() {
   const navigate = useNavigate();
 
   return (
-    <DefaultLayout>
+    <DefaultLayout toggleMap={() => setShowMap(!showMap)}>
       {error && (
         <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4" role="alert">
           <p className="font-bold">Error:</p>
@@ -114,7 +115,7 @@ function Farm() {
           </tbody>
         </table>
 
-        <GoogleMap />
+        {showMap && <GoogleMap />}
       </div>
     </DefaultLayout>
   );

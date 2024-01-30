@@ -3,7 +3,6 @@ import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps';
 import mapStyle from './mapStyle.tsx';
 
 function GoogleMap() {
-  console.log('asdsa');
   return (
     <div className="w-full h-50vh">
       <APIProvider apiKey="AIzaSyAmFCD4MJRHQUz7LLZJcp2iKplFBtbQaRs">
