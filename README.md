@@ -6,6 +6,8 @@ A short video demonstration is available here: https://streamable.com/4oi30w
 
 ## Running the project locally
 
+Node 20 should be installed on your machine globally.
+
 Install the project dependencies:
 
 `npm i` 
