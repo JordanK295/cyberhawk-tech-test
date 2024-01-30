@@ -2,11 +2,12 @@
     "overrides": [
         {
           "files": [
-            "**/*.test.js"
+            "*/**/test.js"
           ],
           "env": {
             "jest": true
-          }
+          },
+          "extends": ["plugin:testing-library/react"]
         }
     ],
     "env": {
@@ -15,7 +16,7 @@
     "parser": "@typescript-eslint/parser",
     "extends": ["eslint:recommended",
     "plugin:prettier/recommended", "airbnb", "prettier", "plugin:@typescript-eslint/recommended"],
-    "plugins": ["prettier", "@typescript-eslint"],
+    "plugins": ["prettier", "@typescript-eslint", "testing-library"],
     "rules": {
         "prettier/prettier": ["error"],
         "react/react-in-jsx-scope": 0,
