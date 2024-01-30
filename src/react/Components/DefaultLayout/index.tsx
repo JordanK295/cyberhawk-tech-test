@@ -22,6 +22,7 @@ function DefaultLayout({ children, toggleMap }: defaultLayoutProps) {
   //   We do the below to avoid having to call the same apis accross multiple components
   const location = useLocation();
   const pathArray = location.pathname.split('/');
+  const isFarmPage = pathArray.length === 3;
   const isTurbinePage = JSON.stringify(pathArray).includes('turbine');
 
   const breadcrumbs = createBreadcrumbs(farms, turbines);
@@ -59,11 +60,13 @@ function DefaultLayout({ children, toggleMap }: defaultLayoutProps) {
       <div className="rounded-lg border border-neutral-200 bg-white mx-4 h-full px-4 py-2">
         <div className="flex gap-2">
           <Breadcrumbs crumbs={breadcrumbs} />
-          <div className="flex p-2 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 mb-3 mt-2">
-            <button aria-label="print" type="button" onClick={() => toggleMap?.()}>
-              <MapSVG />
-            </button>
-          </div>
+          {isFarmPage && (
+            <div className="flex p-2 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 mb-3 mt-2">
+              <button aria-label="print" type="button" onClick={() => toggleMap?.()}>
+                <MapSVG />
+              </button>
+            </div>
+          )}
           <div className="flex p-2 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 mb-3 mt-2">
             <button aria-label="print" type="button" onClick={() => handlePrint()}>
               <PrintSVG />

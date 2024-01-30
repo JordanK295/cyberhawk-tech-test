@@ -115,7 +115,7 @@ function Farm() {
           </tbody>
         </table>
 
-        {showMap && <GoogleMap />}
+        {showMap && <GoogleMap turbines={turbines} />}
       </div>
     </DefaultLayout>
   );
