@@ -9,7 +9,7 @@ const convertDaysAgoToDate = (daysAgoString: string): string => {
   const targetDate = new Date(currentDate);
   targetDate.setDate(currentDate.getDate() - daysAgo);
 
-  const options = { year: 'numeric', month: 'short', day: 'numeric' };
+  const options = { year: 'numeric', month: 'short', day: 'numeric' } as const;
   return targetDate.toLocaleDateString('en-US', options);
 };
 

@@ -11,7 +11,7 @@ function Breadcrumbs({ crumbs }: { crumbs: any }) {
       aria-label="Breadcrumb"
     >
       {crumbs.length > 0 && (
-        <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+        <ol data-testid="breadcrumb" className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
           <li className="inline-flex items-center">
             <a
               href="/farms"

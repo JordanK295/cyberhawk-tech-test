@@ -1,3 +1,6 @@
+import { useLocation } from 'react-router-dom';
+import createBreadcrumbs from './index.tsx';
+
 const mockFarms = [
   { id: 1, name: 'Farm 1' },
   { id: 2, name: 'Farm 2' },
@@ -10,49 +13,52 @@ const mockTurbines = [
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
-  useLocation: jest.fn(),
+  useLocation: jest.fn(() => ({
+    pathname: '',
+  })),
 }));
 
-// Import the createBreadcrumbs function
-const createBreadcrumbs = require('./path-to-createBreadcrumbs');
-
 describe('createBreadcrumbs', () => {
-  beforeEach(() => {
-    // Mock useLocation to return a sample pathname
-    jest.requireMock('react-router-dom').useLocation.mockReturnValue({ pathname: '/farm/1/turbine/2' });
+  it('should return an empty array when there are no path segments', () => {
+    expect(createBreadcrumbs(mockFarms, mockTurbines)).toEqual([]);
   });
 
-  it('should return the correct breadcrumbs for turbine page', () => {
-    const result = createBreadcrumbs(mockFarms, mockTurbines);
+  it('should create breadcrumbs for "Farms" when the path is "/farms"', () => {
+    useLocation.mockReturnValue({
+      pathname: '/farms',
+    });
 
-    expect(result).toEqual([
+    expect(createBreadcrumbs(mockFarms, mockTurbines)).toEqual([{ type: 'farms', title: 'Farms' }]);
+  });
+
+  it('should create breadcrumbs for a specific farm when the path is "/farm/:farmId"', () => {
+    useLocation.mockReturnValue({
+      pathname: '/farm/1',
+    });
+
+    expect(createBreadcrumbs(mockFarms, mockTurbines)).toEqual([
+      { type: 'farms', title: 'Farms' },
+      { type: 'farm', farmId: 1, title: 'Farm 1' },
+    ]);
+  });
+
+  it('should create breadcrumbs for a specific turbine when the path is "/farm/:farmId/turbine/:turbineId"', () => {
+    useLocation.mockReturnValue({
+      pathname: '/farm/1/turbine/2',
+    });
+
+    expect(createBreadcrumbs(mockFarms, mockTurbines)).toEqual([
       { type: 'farms', title: 'Farms' },
       { type: 'farm', farmId: 1, title: 'Farm 1' },
       { type: 'turbine', farmId: 1, turbineId: 2, title: 'Turbine 2' },
     ]);
   });
 
-  it('should return the correct breadcrumbs for farm page', () => {
-    jest.requireMock('react-router-dom').useLocation.mockReturnValue({ pathname: '/farm/1' });
-    const result = createBreadcrumbs(mockFarms, mockTurbines);
+  it('should return an empty array when the farm or turbine does not exist', () => {
+    useLocation.mockReturnValue({
+      pathname: '/farm/3/turbine/4',
+    });
 
-    expect(result).toEqual([
-      { type: 'farms', title: 'Farms' },
-      { type: 'farm', farmId: 1, title: 'Farm 1' },
-    ]);
-  });
-
-  it('should return the correct breadcrumbs for farms page', () => {
-    jest.requireMock('react-router-dom').useLocation.mockReturnValue({ pathname: '/farms' });
-    const result = createBreadcrumbs(mockFarms, mockTurbines);
-
-    expect(result).toEqual([{ type: 'farms', title: 'Farms' }]);
-  });
-
-  it('should return an empty array for unknown paths', () => {
-    jest.requireMock('react-router-dom').useLocation.mockReturnValue({ pathname: '/unknown/path' });
-    const result = createBreadcrumbs(mockFarms, mockTurbines);
-
-    expect(result).toEqual([]);
+    expect(createBreadcrumbs(mockFarms, mockTurbines)).toEqual([]);
   });
 });
